@@ -5,28 +5,34 @@
    ============================================================ */
 
 :root {
-  /* Bakgrunner — dybde via gråtoner, ikke via lyse felt */
-  --bg:        #0A0B0D;   /* near-black, hovedbakgrunn */
-  --bg-2:      #0E0F12;
-  --surface:   #141519;   /* mørk grå, sekundær flate */
-  --surface-2: #1B1D22;   /* løftet panel */
-  --surface-3: #24262C;   /* lysere panel / stage */
+  /* Bakgrunner — lyst og luftig, med svært svake blågrå toner (ingen ren hvit) */
+  --bg:        #F5F7F8;   /* off-white / veldig lys grå, hovedbakgrunn */
+  --bg-2:      #EDF1F6;   /* svak blågrå — vekslende seksjon / hover */
+  --surface:   #E8EEF4;   /* kort / panel (svak blågrå) */
+  --surface-2: #DFE7F0;   /* dypere panel */
+  --surface-3: #FCFDFE;   /* nær-hvit hevet flate (ikke ren hvit) */
 
-  /* Tekst */
-  --fg:        #F2F0EA;   /* varm off-white, hovedtekst */
-  --fg-2:      #A9ABB2;   /* lys grå, sekundær tekst */
-  --fg-3:      #6C6E75;   /* dempet */
-  --fg-4:      #45474D;   /* svært dempet / outline */
+  /* Tekst (ingen ren svart) */
+  --fg:        #101820;   /* mørk blå/svart, hovedtekst */
+  --fg-2:      #4A5560;   /* slate, sekundær tekst */
+  --fg-3:      #7A8695;   /* dempet */
+  --fg-4:      #C0CAD6;   /* svært lys — svake grafiske detaljer */
 
-  /* Hårstreker */
-  --line:   rgba(242, 240, 234, 0.09);
-  --line-2: rgba(242, 240, 234, 0.16);
-  --line-3: rgba(242, 240, 234, 0.28);
+  /* Hårstreker (mørke på lyst) */
+  --line:   rgba(16, 24, 32, 0.10);
+  --line-2: rgba(16, 24, 32, 0.15);
+  --line-3: rgba(16, 24, 32, 0.24);
 
-  /* Aksent — dempet kald elektrisk blå, brukt svært sparsomt */
-  --accent:    #5B79E6;
-  --accent-br: #8CA1F2;
-  --accent-dk: #3A4FA8;
+  /* Aksent — moderne blå, brukt strategisk (ikke store flater) */
+  --accent:     #2457FF;                    /* primær blå */
+  --accent-2:   #8FA8FF;                    /* sekundær lys blå */
+  --accent-br:  #4E77FF;                    /* lysere hover */
+  --accent-dk:  #1B44CC;                    /* mørkere (aktiv) */
+  --accent-soft: rgba(36, 87, 255, 0.07);   /* svak blå hover-flate */
+
+  /* Myke, blå-nøytrale skygger for lys premium-dybde */
+  --shadow:    0 30px 70px -42px rgba(16, 24, 32, 0.30);
+  --shadow-sm: 0 14px 34px -20px rgba(16, 24, 32, 0.16);
 
   /* Type */
   --display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
@@ -155,7 +161,7 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
   border-bottom: 1px solid transparent;
 }
 .site-header.scrolled {
-  background: rgba(10, 11, 13, 0.72);
+  background: rgba(245, 247, 248, 0.78);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom-color: var(--line);
@@ -201,12 +207,12 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
 }
 .header-cta .dot {
   width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(91,121,230,0.55); animation: pulse 2.6s infinite;
+  box-shadow: 0 0 0 0 rgba(36,87,255,0.5); animation: pulse 2.6s infinite;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(91,121,230,0.5); }
-  70% { box-shadow: 0 0 0 7px rgba(91,121,230,0); }
-  100% { box-shadow: 0 0 0 0 rgba(91,121,230,0); }
+  0% { box-shadow: 0 0 0 0 rgba(36,87,255,0.45); }
+  70% { box-shadow: 0 0 0 7px rgba(36,87,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(36,87,255,0); }
 }
 
 .menu-btn { display: none; flex-direction: column; gap: 5px; width: 30px; }
@@ -324,9 +330,9 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
   .hero.ready .hero__meta       { animation: heroFade 0.7s var(--ease) 1.22s both; }
 }
 @keyframes chIn {
-  0%   { opacity: 0; transform: translateY(0.22em); text-shadow: 0 0 16px rgba(242, 240, 234, 0.45); }
+  0%   { opacity: 0; transform: translateY(0.22em); text-shadow: 0 0 18px rgba(36, 87, 255, 0.28); }
   55%  { opacity: 1; }
-  100% { opacity: 1; transform: translateY(0);      text-shadow: 0 0 0 rgba(242, 240, 234, 0); }
+  100% { opacity: 1; transform: translateY(0);      text-shadow: 0 0 0 rgba(36, 87, 255, 0); }
 }
 @keyframes heroFade {
   from { opacity: 0; transform: translateY(9px); }
@@ -380,15 +386,16 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
 /* Stage med ekte forrebygg.no vist på laptop + overlappende mobil */
 .case__visual {
   position: relative;
-  background: radial-gradient(120% 120% at 50% 0%, var(--surface-2) 0%, var(--surface) 55%, var(--bg-2) 100%);
+  background: radial-gradient(120% 120% at 50% 0%, var(--surface-3) 0%, var(--surface) 60%, var(--bg-2) 100%);
   border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
   padding: clamp(2rem, 6vw, 6rem) clamp(1.25rem, 5vw, 6rem) clamp(4rem, 9vw, 8.5rem);
 }
 .case__visual .tag {
   position: absolute; top: 1.1rem; left: 1.3rem;
   font-family: var(--display); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--fg-3);
 }
-.case__visual .tag::before { content: "● "; color: #37d67a; font-size: 0.7em; }
+.case__visual .tag::before { content: "● "; color: #12B886; font-size: 0.7em; }
 
 /* ---- Laptop ---- */
 .laptop { width: 100%; max-width: 1040px; margin: 0 auto; will-change: transform; }
@@ -398,10 +405,10 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
   border-radius: 16px 16px 4px 4px;
   padding: 12px 12px 0;
   position: relative;
-  box-shadow: 0 50px 90px -40px rgba(0,0,0,0.85), inset 0 0 0 1px rgba(0,0,0,0.5);
+  box-shadow: 0 42px 80px -38px rgba(16,24,32,0.38), inset 0 1px 0 rgba(255,255,255,0.06);
 }
 .laptop__cam { position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 5px; height: 5px; border-radius: 50%; background: #34353a; }
-.laptop__screen { overflow: hidden; border-radius: 4px; background: #000; margin-top: 4px; }
+.laptop__screen { overflow: hidden; border-radius: 4px; background: #0d1217; margin-top: 4px; }
 .laptop__screen img { display: block; width: 100%; }
 .laptop__deck {
   position: relative;
@@ -428,11 +435,11 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 26px;
   padding: 8px;
-  box-shadow: 0 40px 60px -25px rgba(0,0,0,0.8);
+  box-shadow: 0 32px 55px -26px rgba(16,24,32,0.34);
   will-change: transform;
 }
-.phone__speaker { position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 34%; height: 6px; background: #050506; border-radius: 6px; z-index: 2; }
-.phone__screen { overflow: hidden; border-radius: 19px; background: #000; }
+.phone__speaker { position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 34%; height: 6px; background: #0a0e13; border-radius: 6px; z-index: 2; }
+.phone__screen { overflow: hidden; border-radius: 19px; background: #0d1217; }
 .phone__screen img { display: block; width: 100%; }
 
 /* Kort tekst + fakta */
@@ -471,7 +478,7 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
   border-bottom: 1px solid var(--line);
   transition: background .4s var(--ease);
 }
-.offer__row:hover { background: var(--bg-2); }
+.offer__row:hover { background: var(--accent-soft); }
 .offer__no { font-family: var(--display); font-size: 0.8rem; color: var(--fg-3); transition: color .3s var(--ease); }
 .offer__row:hover .offer__no { color: var(--accent); }
 .offer__name {
@@ -507,7 +514,7 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
   border-bottom: 1px solid var(--line);
   transition: background .4s var(--ease);
 }
-.step:hover { background: var(--surface); }
+.step:hover { background: var(--accent-soft); }
 .step__no { font-family: var(--display); font-size: 0.8rem; letter-spacing: 0.06em; color: var(--accent); }
 .step__title {
   font-family: var(--display); font-weight: 700;
