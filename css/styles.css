@@ -23,12 +23,13 @@
   --line-2: rgba(16, 24, 32, 0.15);
   --line-3: rgba(16, 24, 32, 0.24);
 
-  /* Aksent — moderne blå, brukt strategisk (ikke store flater) */
-  --accent:     #2457FF;                    /* primær blå */
-  --accent-2:   #8FA8FF;                    /* sekundær lys blå */
-  --accent-br:  #4E77FF;                    /* lysere hover */
-  --accent-dk:  #1B44CC;                    /* mørkere (aktiv) */
-  --accent-soft: rgba(36, 87, 255, 0.07);   /* svak blå hover-flate */
+  /* Aksent — lysere neon-blå (blanding av neon blå + blå), brukt strategisk */
+  --accent:     #2E77FF;                    /* primær: lys elektrisk blå */
+  --accent-2:   #79B4FF;                    /* sekundær neon lys blå */
+  --accent-br:  #57A0FF;                    /* lysere hover */
+  --accent-dk:  #1E58E6;                    /* mørkere (aktiv) */
+  --accent-soft: rgba(46, 119, 255, 0.08);  /* svak neon-blå hover-flate */
+  --accent-grad: linear-gradient(118deg, #2E77FF 0%, #56A6FF 100%); /* neon↔blå */
 
   /* Myke, blå-nøytrale skygger for lys premium-dybde */
   --shadow:    0 30px 70px -42px rgba(16, 24, 32, 0.30);
@@ -207,12 +208,12 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
 }
 .header-cta .dot {
   width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(36,87,255,0.5); animation: pulse 2.6s infinite;
+  box-shadow: 0 0 0 0 rgba(46,119,255,0.5); animation: pulse 2.6s infinite;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(36,87,255,0.45); }
-  70% { box-shadow: 0 0 0 7px rgba(36,87,255,0); }
-  100% { box-shadow: 0 0 0 0 rgba(36,87,255,0); }
+  0% { box-shadow: 0 0 0 0 rgba(46,119,255,0.45); }
+  70% { box-shadow: 0 0 0 7px rgba(46,119,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(46,119,255,0); }
 }
 
 .menu-btn { display: none; flex-direction: column; gap: 5px; width: 30px; }
@@ -330,9 +331,9 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
   .hero.ready .hero__meta       { animation: heroFade 0.7s var(--ease) 1.22s both; }
 }
 @keyframes chIn {
-  0%   { opacity: 0; transform: translateY(0.22em); text-shadow: 0 0 18px rgba(36, 87, 255, 0.28); }
+  0%   { opacity: 0; transform: translateY(0.22em); text-shadow: 0 0 18px rgba(46, 119, 255, 0.28); }
   55%  { opacity: 1; }
-  100% { opacity: 1; transform: translateY(0);      text-shadow: 0 0 0 rgba(36, 87, 255, 0); }
+  100% { opacity: 1; transform: translateY(0);      text-shadow: 0 0 0 rgba(46, 119, 255, 0); }
 }
 @keyframes heroFade {
   from { opacity: 0; transform: translateY(9px); }
