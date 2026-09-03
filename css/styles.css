@@ -289,47 +289,48 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
   font-size: clamp(3.1rem, 16.5vw, 17rem);
   line-height: 0.82; letter-spacing: -0.045em; text-transform: uppercase;
 }
-.hero__title .l { display: block; overflow: hidden; }
-.hero__title .l > span { display: inline-block; }
+.hero__title .l { display: block; }
+.hero__title .w { display: inline-block; white-space: nowrap; text-indent: 0; } /* samlet ord; nullstiller arvet text-indent */
+.hero__title .ch { display: inline-block; text-indent: 0; will-change: opacity, transform; }
 
 /* MARDAL er bredest (M + A + R + D) → flush; DIGITAL rykkes inn for asymmetri */
 .hero__title .l2 { text-indent: clamp(0px, 7vw, 7rem); }
-/* Hviletilstand for DIGITAL: fylt lys tekst (som slutten av intro-animasjonen) */
-.hero__title .l2 > span {
-  color: var(--fg);
-  -webkit-text-stroke: clamp(1px, 0.14vw, 2px) transparent;
-  text-stroke: clamp(1px, 0.14vw, 2px) transparent;
-}
 
 /* ---- Intro-reveal ----------------------------------------------------------
-   Når siden åpnes tegnes "MARDAL DIGITAL" frem fra venstre mot høyre.
-   MARDAL sveipes inn til sin fylte off-white. DIGITAL tegnes først som mørk
-   outline (venstre→høyre), og fylles så gradvis med sin lyse tekst.
-   Kun bevegelse — font, størrelse, plassering og spacing er uendret.
-   Negativ vertikal inset gjør at kun den horisontale kanten sveiper. ------- */
+   Når siden åpnes skrives "MARDAL DIGITAL" inn bokstav for bokstav: hver bokstav
+   kommer frem med subtil opacity + en liten oppadgående bevegelse + kort glød,
+   sekvensielt fra venstre. Når navnet står ferdig, kommer resten av hero-seksjonen
+   rolig frem. Teksten er vanlig HTML (aria-label på h1 gir korrekt navn for
+   skjermlesere/SEO), og layout, spacing og farger er uendret. ---------------- */
 @media (prefers-reduced-motion: no-preference) {
-  /* Startpunkt før .ready: begge ord skjult (klippet fra høyre); DIGITAL som outline */
-  .hero:not(.ready) .hero__title .l > span { clip-path: inset(-0.16em 100% -0.16em 0); }
-  .hero:not(.ready) .hero__title .l2 > span {
-    color: transparent;
-    -webkit-text-stroke-color: var(--fg-4);
-    text-stroke-color: var(--fg-4);
+  /* Startpunkt før .ready: navnet og resten av hero er usynlig */
+  .hero:not(.ready) .hero__title .ch { opacity: 0; }
+  .hero:not(.ready) .hero__tl,
+  .hero:not(.ready) .hero__tr,
+  .hero:not(.ready) .hero__title .idx,
+  .hero:not(.ready) .hero__lead,
+  .hero:not(.ready) .hero__meta { opacity: 0; }
+
+  /* Bokstavene skrives inn, én etter én */
+  .hero.ready .hero__title .ch {
+    animation: chIn 0.5s cubic-bezier(0.22, 0.7, 0.24, 1) both;
+    animation-delay: calc(var(--i) * 0.04s);
   }
-  /* MARDAL: sveip inn til fylt */
-  .hero.ready .hero__title .l1 > span { animation: heroDraw 0.9s cubic-bezier(0.66, 0, 0.34, 1) both; }
-  /* DIGITAL: outline tegnes, deretter fylles teksten inn */
-  .hero.ready .hero__title .l2 > span {
-    animation: heroDraw 0.85s cubic-bezier(0.66, 0, 0.34, 1) 0.5s both,
-               heroFill 0.6s ease 1.3s both;
-  }
+  /* Resten av hero kommer rolig frem etter at navnet står ferdig (~1s) */
+  .hero.ready .hero__tl         { animation: heroFade 0.7s var(--ease) 1.02s both; }
+  .hero.ready .hero__tr         { animation: heroFade 0.7s var(--ease) 1.08s both; }
+  .hero.ready .hero__title .idx { animation: heroFade 0.7s var(--ease) 1.10s both; }
+  .hero.ready .hero__lead       { animation: heroFade 0.7s var(--ease) 1.14s both; }
+  .hero.ready .hero__meta       { animation: heroFade 0.7s var(--ease) 1.22s both; }
 }
-@keyframes heroDraw {
-  from { clip-path: inset(-0.16em 100% -0.16em 0); }
-  to   { clip-path: inset(-0.16em 0 -0.16em 0); }
+@keyframes chIn {
+  0%   { opacity: 0; transform: translateY(0.22em); text-shadow: 0 0 16px rgba(242, 240, 234, 0.45); }
+  55%  { opacity: 1; }
+  100% { opacity: 1; transform: translateY(0);      text-shadow: 0 0 0 rgba(242, 240, 234, 0); }
 }
-@keyframes heroFill {
-  from { color: transparent; -webkit-text-stroke-color: var(--fg-4); text-stroke-color: var(--fg-4); }
-  to   { color: var(--fg);   -webkit-text-stroke-color: transparent; text-stroke-color: transparent; }
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(9px); }
+  to   { opacity: 1; transform: none; }
 }
 /* liten aksentindeks som overlapper tittelen */
 .hero__title .idx {
@@ -628,7 +629,8 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
-  .hero__title .l > span { transform: none !important; clip-path: none !important; animation: none !important; }
+  .hero__title .ch { opacity: 1 !important; transform: none !important; text-shadow: none !important; animation: none !important; }
+  .hero__tl, .hero__tr, .hero__lead, .hero__meta, .hero__title .idx { opacity: 1 !important; transform: none !important; animation: none !important; }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
   .loader { display: none !important; }
   .cursor { display: none !important; }
