@@ -290,15 +290,46 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
   line-height: 0.82; letter-spacing: -0.045em; text-transform: uppercase;
 }
 .hero__title .l { display: block; overflow: hidden; }
-.hero__title .l > span { display: inline-block; transform: translateY(105%); transition: transform 1s var(--ease-2); }
-.hero.ready .hero__title .l > span { transform: translateY(0); }
+.hero__title .l > span { display: inline-block; }
+
 /* MARDAL er bredest (M + A + R + D) → flush; DIGITAL rykkes inn for asymmetri */
 .hero__title .l2 { text-indent: clamp(0px, 7vw, 7rem); }
+/* Hviletilstand for DIGITAL: fylt lys tekst (som slutten av intro-animasjonen) */
 .hero__title .l2 > span {
-  color: transparent;
-  -webkit-text-stroke: clamp(1px, 0.14vw, 2px) var(--fg-4);
-  text-stroke: clamp(1px, 0.14vw, 2px) var(--fg-4);
-  transition-delay: 0.12s;
+  color: var(--fg);
+  -webkit-text-stroke: clamp(1px, 0.14vw, 2px) transparent;
+  text-stroke: clamp(1px, 0.14vw, 2px) transparent;
+}
+
+/* ---- Intro-reveal ----------------------------------------------------------
+   Når siden åpnes tegnes "MARDAL DIGITAL" frem fra venstre mot høyre.
+   MARDAL sveipes inn til sin fylte off-white. DIGITAL tegnes først som mørk
+   outline (venstre→høyre), og fylles så gradvis med sin lyse tekst.
+   Kun bevegelse — font, størrelse, plassering og spacing er uendret.
+   Negativ vertikal inset gjør at kun den horisontale kanten sveiper. ------- */
+@media (prefers-reduced-motion: no-preference) {
+  /* Startpunkt før .ready: begge ord skjult (klippet fra høyre); DIGITAL som outline */
+  .hero:not(.ready) .hero__title .l > span { clip-path: inset(-0.16em 100% -0.16em 0); }
+  .hero:not(.ready) .hero__title .l2 > span {
+    color: transparent;
+    -webkit-text-stroke-color: var(--fg-4);
+    text-stroke-color: var(--fg-4);
+  }
+  /* MARDAL: sveip inn til fylt */
+  .hero.ready .hero__title .l1 > span { animation: heroDraw 0.9s cubic-bezier(0.66, 0, 0.34, 1) both; }
+  /* DIGITAL: outline tegnes, deretter fylles teksten inn */
+  .hero.ready .hero__title .l2 > span {
+    animation: heroDraw 0.85s cubic-bezier(0.66, 0, 0.34, 1) 0.5s both,
+               heroFill 0.6s ease 1.3s both;
+  }
+}
+@keyframes heroDraw {
+  from { clip-path: inset(-0.16em 100% -0.16em 0); }
+  to   { clip-path: inset(-0.16em 0 -0.16em 0); }
+}
+@keyframes heroFill {
+  from { color: transparent; -webkit-text-stroke-color: var(--fg-4); text-stroke-color: var(--fg-4); }
+  to   { color: var(--fg);   -webkit-text-stroke-color: transparent; text-stroke-color: transparent; }
 }
 /* liten aksentindeks som overlapper tittelen */
 .hero__title .idx {
@@ -597,7 +628,7 @@ body.cursor-media .cursor__label { opacity: 1; transform: scale(1); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
-  .hero__title .l > span { transform: none !important; }
+  .hero__title .l > span { transform: none !important; clip-path: none !important; animation: none !important; }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
   .loader { display: none !important; }
   .cursor { display: none !important; }
