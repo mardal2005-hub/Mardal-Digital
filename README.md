@@ -33,7 +33,7 @@ ingen byggeprosess. Rask, enkel å hoste, enkel å utvide.
 ├── personvern.html     # Personvernerklæring i samme stil
 ├── css/styles.css      # Designsystemet
 ├── js/main.js          # Cursor, reveal, parallax, meny, klokke
-├── assets/img/         # MD-favicon, og-image, Førre Bygg-mockups (SVG)
+├── assets/img/         # MD-favicon, og-image, ekte forrebygg.no-skjermbilder (PNG)
 ├── robots.txt · sitemap.xml · CNAME · .nojekyll
 ```
 
@@ -60,7 +60,7 @@ og nye legges til uten at siden ser tom ut i mellomtiden.
 | Domene | `CNAME`, meta i `index.html`, `robots.txt`, `sitemap.xml` (satt til `mardaldigital.no` — endre ved behov) |
 | E-post | `hei@mardaldigital.no` i `index.html` / `personvern.html` |
 | Sosiale lenker | `href="#"` i kontaktseksjonen (`class="socials"`) |
-| Førre Bygg-bilder | SVG-mockups i `assets/img/` kan byttes med ekte skjermbilder |
+| Førre Bygg-bilder | Ekte skjermbilder av forrebygg.no vist i laptop/mobil-ramme (`assets/img/forre-bygg-*.png`) |
 
 ## Publisere
 
