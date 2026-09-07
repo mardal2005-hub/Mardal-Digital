@@ -88,7 +88,7 @@
       var action = form.getAttribute('action') || '';
       var data = new FormData(form);
       if (action.indexOf('your-form-id') !== -1) {
-        var body = 'Navn: ' + (data.get('navn') || '') + '\nE-post: ' + (data.get('epost') || '') + '\n\n' + (data.get('melding') || '');
+        var body = 'Navn: ' + (data.get('navn') || '') + '\nE-post: ' + (data.get('email') || '') + '\n\n' + (data.get('melding') || '');
         window.location.href = 'mailto:mardal2005@gmail.com?subject=' + encodeURIComponent('Henvendelse fra nettsiden') + '&body=' + encodeURIComponent(body);
         form.classList.add('sent'); return;
       }

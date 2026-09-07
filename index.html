@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/styles.css?v=5">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"Mardal Digital","description":"Webutvikling og design — nettsider for småbedrifter og enkeltpersonforetak.","founder":"Vetle Austrheim Mardal","url":"https://mardaldigital.no/","email":"mardal2005@gmail.com","telephone":"+4741392413","areaServed":"Norge","priceRange":"14 900 kr"}
   </script>
@@ -248,10 +248,12 @@
                 <a href="tel:+4741392413">☎ 413 92 413</a>
               </div>
             </div>
-            <form class="form" id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <form class="form" id="contactForm" action="https://formspree.io/f/mljepgan" method="POST">
+              <input type="hidden" name="_subject" value="Ny henvendelse fra mardaldigital.no">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
               <div class="form__fields">
                 <div class="form__row"><label for="navn">Navn</label><input id="navn" name="navn" type="text" required placeholder="Ola Nordmann"></div>
-                <div class="form__row"><label for="epost">E-post</label><input id="epost" name="epost" type="email" required placeholder="ola@bedrift.no"></div>
+                <div class="form__row"><label for="epost">E-post</label><input id="epost" name="email" type="email" required placeholder="ola@bedrift.no"></div>
                 <div class="form__row"><label for="melding">Fortell kort om prosjektet</label><textarea id="melding" name="melding" required placeholder="Jeg driver en … og trenger en nettside som …"></textarea></div>
                 <button class="btn btn--ink btn--block" type="submit">Send melding <span class="arw">→</span></button>
                 <p class="form__note">Jeg deler aldri opplysningene dine.</p>
@@ -289,6 +291,6 @@
   </footer>
 
   <div class="sticky-cta" id="stickyCta"><a class="btn btn--violet btn--block" href="#kontakt">La oss ta en prat →</a></div>
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>
