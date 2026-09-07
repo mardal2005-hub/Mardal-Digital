@@ -3,345 +3,292 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mardal Digital — Webdesign for bedrifter som vil skille seg ut</title>
-  <meta name="description" content="Mardal Digital er et digitalt designstudio. Skreddersydde, moderne nettsider for bedrifter som vil skille seg ut. Se arbeidet.">
+  <title>Mardal Digital — nettsider for småbedrifter | webutvikling &amp; design</title>
+  <meta name="description" content="Mardal Digital lager raske, stilrene nettsider for småbedrifter og enkeltpersonforetak. Fast pris 14 900 kr, personlig oppfølging og levering på 1–2 uker.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#F5F7F8">
+  <meta name="theme-color" content="#F4F3EF">
   <link rel="canonical" href="https://mardaldigital.no/">
-
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mardal Digital — digitalt designstudio">
-  <meta property="og:description" content="Webdesign for bedrifter som vil skille seg ut.">
+  <meta property="og:title" content="Mardal Digital — nettsider for småbedrifter">
+  <meta property="og:description" content="Raske, stilrene nettsider til fast pris. 14 900 kr, levering på 1–2 uker.">
   <meta property="og:url" content="https://mardaldigital.no/">
   <meta property="og:image" content="https://mardaldigital.no/assets/img/og-image.svg">
   <meta name="twitter:card" content="summary_large_image">
-
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=2">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css?v=4">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Mardal Digital",
-    "description": "Digitalt designstudio som lager skreddersydde nettsider for bedrifter.",
-    "url": "https://mardaldigital.no/",
-    "email": "hei@mardaldigital.no",
-    "areaServed": "Norge",
-    "knowsAbout": ["Webdesign", "Webutvikling", "Merkevare", "Digital identitet"]
-  }
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Mardal Digital","description":"Webutvikling og design — nettsider for småbedrifter og enkeltpersonforetak.","founder":"Vetle Austrheim Mardal","url":"https://mardaldigital.no/","email":"mardal2005@gmail.com","telephone":"+4741392413","areaServed":"Norge","priceRange":"14 900 kr"}
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#work">Hopp til innhold</a>
-
-  <!-- Custom cursor -->
-  <div class="cursor" aria-hidden="true"><span class="cursor__label">Se</span></div>
-
-  <!-- Preloader -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <span class="loader__word">Mardal Digital</span>
-    <span class="loader__track"></span>
-  </div>
+  <a class="skip-link" href="#kontakt">Hopp til kontakt</a>
 
   <!-- Header -->
-  <header class="site-header" id="header">
-    <a class="brand" href="#top" aria-label="Mardal Digital – til toppen">
-      <svg class="md" viewBox="0 0 40 40" aria-hidden="true">
-        <rect x="1.5" y="1.5" width="37" height="37" stroke-width="1.5"/>
-        <path d="M9 30V11.5h3.4l4.2 9.3 4.2-9.3H24V30h-3V17.6l-3.6 8h-1.6l-3.6-8V30H9Zm17.4 0V11.5h4.1c4.2 0 6.8 3.4 6.8 9.2s-2.6 9.3-6.8 9.3h-4.1Zm3-2.7h1.1c2.4 0 3.8-2.2 3.8-6.6s-1.4-6.5-3.8-6.5h-1.1v13.1Z"/>
-        <line x1="6" y1="34" x2="16" y2="34" stroke-width="1.5"/>
-      </svg>
-      <span class="brand__txt">Mardal Digital</span>
+  <header class="header" id="header">
+    <a class="brand" href="#top" aria-label="Mardal Digital">
+      <svg class="md" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="11" fill="#5B34F0"/><path d="M9 29V12h3.1l3.9 8.6L19.9 12H23v17h-2.8V18.7l-3.3 7.2h-1.6l-3.3-7.2V29H9Zm16.6 0V12h3.7c3.8 0 6.2 3.1 6.2 8.5s-2.4 8.5-6.2 8.5h-3.7Zm2.8-2.5h.9c2.2 0 3.4-2 3.4-6s-1.2-6-3.4-6h-.9v12Z" fill="#fff"/></svg>
+      Mardal Digital
     </a>
-
     <nav class="nav" aria-label="Hovedmeny">
-      <a href="#work"><span class="n">02</span>Arbeid</a>
-      <a href="#services"><span class="n">03</span>Tjenester</a>
-      <a href="#process"><span class="n">04</span>Prosess</a>
-      <a href="#about"><span class="n">05</span>Om</a>
-      <a href="#contact"><span class="n">06</span>Kontakt</a>
+      <div class="nav__links">
+        <a href="#arbeid">Arbeid</a>
+        <a href="#tjenester">Tjenester</a>
+        <a href="#priser">Priser</a>
+        <a href="#om">Om</a>
+      </div>
+      <a class="btn btn--ink" href="#kontakt">La oss ta en prat</a>
     </nav>
-
-    <a class="header-cta" href="#contact"><span class="dot" aria-hidden="true"></span>Ledig for prosjekter</a>
-
-    <button class="menu-btn" id="menuBtn" aria-label="Åpne meny" aria-expanded="false" aria-controls="mobileNav">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="menu-btn" id="menuBtn" aria-label="Åpne meny" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </header>
-
-  <!-- Mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Meny">
-    <a href="#work"><span class="n">02</span>Arbeid</a>
-    <a href="#services"><span class="n">03</span>Tjenester</a>
-    <a href="#process"><span class="n">04</span>Prosess</a>
-    <a href="#about"><span class="n">05</span>Om</a>
-    <a href="#contact"><span class="n">06</span>Kontakt</a>
-    <div class="mobile-nav__foot">
-      <a class="label" href="mailto:hei@mardaldigital.no">hei@mardaldigital.no</a>
-      <span class="label label--dim">Haugalandet, NO</span>
-    </div>
+    <a href="#arbeid">Arbeid</a><a href="#tjenester">Tjenester</a><a href="#priser">Priser</a><a href="#om">Om</a><a href="#kontakt">Kontakt</a>
+    <a class="btn btn--violet" href="#kontakt">La oss ta en prat</a>
   </nav>
 
   <span id="top"></span>
   <main>
 
-    <!-- ============ 01 — HERO ============ -->
-    <section class="hero" id="hero" aria-label="Intro">
-      <span class="label hero__tl"><b>01</b><span class="rule"></span>Intro</span>
-
-      <div class="hero__tr">
-        <span class="label">Based in Norway</span>
-        <span class="label">59°N — Remote</span>
-      </div>
-
-      <div class="hero__title">
-        <span class="idx" aria-hidden="true">© 2026</span>
-        <h1 aria-label="Mardal Digital">
-          <span class="l l1"><span class="w" aria-hidden="true"><span class="ch" style="--i:0">M</span><span class="ch" style="--i:1">A</span><span class="ch" style="--i:2">R</span><span class="ch" style="--i:3">D</span><span class="ch" style="--i:4">A</span><span class="ch" style="--i:5">L</span></span></span>
-          <span class="l l2"><span class="w" aria-hidden="true"><span class="ch" style="--i:6">D</span><span class="ch" style="--i:7">I</span><span class="ch" style="--i:8">G</span><span class="ch" style="--i:9">I</span><span class="ch" style="--i:10">T</span><span class="ch" style="--i:11">A</span><span class="ch" style="--i:12">L</span></span></span>
-        </h1>
-      </div>
-
-      <div class="hero__lead">
-        <span class="label"><span class="rule"></span>Web Design / Development</span>
-        <p>Webdesign for bedrifter som vil skille seg ut.</p>
-      </div>
-
-      <div class="hero__meta">
-        <span class="label">Scroll to explore</span>
-        <span class="label" style="color:var(--accent)">↓</span>
-      </div>
-    </section>
-
-    <!-- ============ 02 — SELECTED WORK ============ -->
-    <section class="section section--divider" id="work" aria-labelledby="work-title">
-      <div class="sec-head">
-        <span class="sec-head__label label"><b>02</b><span class="rule"></span>Selected Work</span>
-        <h2 class="sec-head__title" id="work-title" data-reveal>Utvalgt<br>arbeid</h2>
-        <p class="sec-head__note" data-reveal style="--i:1">Kvalitet foran kvantitet. Hvert prosjekt får en egen visuell identitet, bygget fra bunnen.</p>
-      </div>
-
-      <article class="case">
-        <div class="case__head">
-          <span class="case__no" data-reveal>(01)</span>
-          <h3 class="case__title" data-reveal style="--i:1">Førre Bygg</h3>
-          <div class="case__meta" data-reveal style="--i:2">
-            Webdesign · Utvikling<br>
-            Byggefirma / 2026<br>
-            <a href="https://forrebygg.no" target="_blank" rel="noopener">Se live: forrebygg.no →</a>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="hero__status" data-reveal><span class="dot"></span> Ledig for nye prosjekter</span>
+        <h1 class="display" data-reveal style="--i:1">Nettsider som får <span class="hl">småbedrifter til å vokse.</span></h1>
+        <div class="hero__row">
+          <div data-reveal style="--i:2">
+            <p class="lead hero__lead">Jeg lager raske, stilrene nettsider for småbedrifter og enkeltpersonforetak. Fast pris, personlig oppfølging, og en side du blir stolt av å dele.</p>
+            <div class="hero__cta">
+              <a class="btn btn--violet" href="#kontakt">La oss ta en prat <span class="arw">→</span></a>
+              <a class="btn btn--ghost" href="#arbeid">Se arbeidet mitt</a>
+            </div>
+          </div>
+          <div class="hero__proof" data-reveal style="--i:3">
+            <div class="num">14 900,-</div>
+            <div class="sub">fast pris — alt inkludert</div>
           </div>
         </div>
 
-        <div class="case__visual" data-reveal data-cursor="media" data-cursor-label="Live">
-          <span class="tag">FORREBYGG.NO — LIVE</span>
+        <div class="hero__shot" data-reveal style="--i:2">
+          <img src="assets/img/forre-bygg-desktop.png" alt="Nettsiden vi laget for Førre Bygg">
+        </div>
+      </div>
+    </section>
 
-          <div class="laptop" data-parallax="0.04">
-            <div class="laptop__lid">
-              <span class="laptop__cam" aria-hidden="true"></span>
-              <div class="laptop__screen">
-                <img src="assets/img/forre-bygg-desktop.png" alt="Nettsiden til Førre Bygg (forrebygg.no) vist på en laptop" loading="lazy">
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true"><div class="marquee__track">
+      <span>Webdesign <i class="st">✦</i> Utvikling <i class="st">✦</i> Responsivt design <i class="st">✦</i> SEO &amp; Google <i class="st">✦</i> Domene <i class="st">✦</i> Vedlikehold <i class="st">✦</i></span>
+      <span>Webdesign <i class="st">✦</i> Utvikling <i class="st">✦</i> Responsivt design <i class="st">✦</i> SEO &amp; Google <i class="st">✦</i> Domene <i class="st">✦</i> Vedlikehold <i class="st">✦</i></span>
+    </div></div>
+
+    <!-- ============ TJENESTER ============ -->
+    <section class="section" id="tjenester">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <span class="eyebrow">Tjenester</span>
+          <h2 class="h2" style="margin-top:1rem">Alt du trenger for å bli synlig på nett — <span class="tick">på ett sted.</span></h2>
+        </div>
+        <div class="services">
+          <div class="service" data-reveal>
+            <span class="service__no">01</span>
+            <h3 class="h3">Webdesign &amp; utvikling</h3>
+            <p>En komplett, responsiv nettside bygget fra bunnen — tydelig struktur og like lekker på mobil, nettbrett og PC.</p>
+            <div class="service__tags"><span>Responsivt</span><span>UX/UI</span><span>Tydelige CTA-er</span></div>
+          </div>
+          <div class="service" data-reveal style="--i:1">
+            <span class="service__no">02</span>
+            <h3 class="h3">Struktur &amp; innhold</h3>
+            <p>Tydelig oppbygning som fremhever tjenestene dine og leder besøkende mot å ta kontakt.</p>
+            <div class="service__tags"><span>Struktur</span><span>Innhold</span><span>Konvertering</span></div>
+          </div>
+          <div class="service" data-reveal>
+            <span class="service__no">03</span>
+            <h3 class="h3">SEO &amp; synlighet</h3>
+            <p>Grunnleggende SEO-oppsett og kobling mot ditt eksisterende domene, så folk finner deg når de søker.</p>
+            <div class="service__tags"><span>SEO</span><span>Domene</span><span>Google</span></div>
+          </div>
+          <div class="service" data-reveal style="--i:1">
+            <span class="service__no">04</span>
+            <h3 class="h3">Vedlikehold &amp; support</h3>
+            <p>Valgfri løpende oppdatering av innhold, tekniske oppdateringer og support når du trenger det.</p>
+            <div class="service__tags"><span>Oppdatering</span><span>Sikkerhet</span><span>Support</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ARBEID ============ -->
+    <section class="section" id="arbeid" style="background:#fff">
+      <div class="wrap">
+        <div class="sec-head between" data-reveal>
+          <div>
+            <span class="eyebrow">Utvalgt arbeid</span>
+            <h2 class="h2" style="margin-top:1rem;max-width:18ch">Nettsider bygget for å skape tillit.</h2>
+          </div>
+          <p class="lead" style="max-width:34ch">Ekte prosjekter for ekte bedrifter. Her er det siste jeg har levert.</p>
+        </div>
+        <div class="work">
+          <article class="case case--feature" data-reveal>
+            <div class="case__media">
+              <span class="case__pill">Webdesign · Utvikling</span>
+              <img src="assets/img/forre-bygg-desktop.png" alt="Nettside for Førre Bygg">
+            </div>
+            <div class="case__info">
+              <div>
+                <h3 class="h3">Førre Bygg</h3>
+                <div class="meta">Byggefirma · Tysvær</div>
+                <p class="case__desc">En ny, moderne nettside som gir et solid førsteinntrykk og gjør det enkelt for kundene å be om tilbud.</p>
+                <a class="txtlink" style="color:var(--violet);margin-top:1rem" href="https://forrebygg.no" target="_blank" rel="noopener">Se siden live: forrebygg.no →</a>
+              </div>
+              <div class="case__tags"><span>Live</span><span>2026</span></div>
+            </div>
+          </article>
+
+          <div class="case-next" data-reveal>
+            <div>
+              <h3 class="h3">Nytt prosjekt på vei ✦</h3>
+              <p>Jeg tar imot nye prosjekter nå. Din bedrift kan bli den neste her.</p>
+            </div>
+            <a class="btn btn--violet" href="#kontakt">La oss ta en prat <span class="arw">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROSESS ============ -->
+    <section class="section" id="prosess">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <span class="eyebrow">Slik jobber vi sammen</span>
+          <h2 class="h2" style="margin-top:1rem">Fra idé til ferdig nettside — <span class="tick">uten stress.</span></h2>
+        </div>
+        <div class="process">
+          <div class="step" data-reveal><span class="step__no">01</span><h3>Kartlegge</h3><p>Vi blir kjent med bedriften din, hvem du vil nå og hva siden skal oppnå.</p></div>
+          <div class="step" data-reveal style="--i:1"><span class="step__no">02</span><h3>Utforme</h3><p>Du får se en tydelig forhåndsvisning tilpasset bedriften før vi går videre.</p></div>
+          <div class="step" data-reveal style="--i:2"><span class="step__no">03</span><h3>Utvikle</h3><p>Jeg bygger en rask, responsiv side og setter opp innholdet ditt på en tydelig måte.</p></div>
+          <div class="step" data-reveal style="--i:3"><span class="step__no">04</span><h3>Lansere</h3><p>Vi kobler mot domenet ditt, publiserer, og jeg hjelper deg videre ved behov.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRISER ============ -->
+    <section class="section" id="priser" style="background:#fff">
+      <div class="wrap">
+        <div class="sec-head" data-reveal style="text-align:center;margin-left:auto;margin-right:auto">
+          <span class="eyebrow" style="justify-content:center">Priser</span>
+          <h2 class="h2" style="margin-top:1rem">Én fast pris. Alt inkludert.</h2>
+          <p class="lead" style="margin-top:1rem">Ingen skjulte kostnader og ingen overraskelser. Du vet hva det koster før vi setter i gang.</p>
+        </div>
+        <div class="plans">
+          <div class="plan plan--feat" data-reveal>
+            <div class="plan__badge">Komplett nettside</div>
+            <div class="plan__name">Nettside</div>
+            <p class="plan__tag">Alt du trenger for en proff nettside, til én fast pris.</p>
+            <div class="plan__price">14 900 kr <small>fast totalpris</small></div>
+            <ul>
+              <li>Design &amp; utvikling av komplett nettside</li>
+              <li>Responsivt for mobil, nettbrett &amp; PC</li>
+              <li>Tydelig struktur, innhold &amp; CTA-er</li>
+              <li>Grunnleggende SEO &amp; kobling mot domenet ditt</li>
+              <li>Kontaktskjema</li>
+              <li>Testing, publisering &amp; gjennomgang</li>
+              <li>Levering på 1–2 uker</li>
+            </ul>
+            <a class="btn btn--light btn--block" href="#kontakt">La oss ta en prat</a>
+          </div>
+          <div class="plan" data-reveal style="--i:1">
+            <div class="plan__name">Vedlikehold</div>
+            <p class="plan__tag">Valgfritt — for deg som vil at siden alltid er oppdatert og trygg.</p>
+            <div class="plan__price">890 kr <small>/ mnd</small></div>
+            <ul>
+              <li>Oppdatering av tekst, bilder &amp; innhold</li>
+              <li>Tekniske oppdateringer &amp; sikkerhet</li>
+              <li>Kontroll av at alt fungerer som det skal</li>
+              <li>Support ved behov</li>
+              <li>Kan sies opp når som helst</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#kontakt">La oss ta en prat</a>
+          </div>
+        </div>
+        <p class="plans__note">Fast totalpris, eks. mva. Betales ved levering når du har godkjent siden.</p>
+      </div>
+    </section>
+
+    <!-- ============ OM ============ -->
+    <section class="section" id="om">
+      <div class="wrap about">
+        <div data-reveal>
+          <span class="eyebrow">Om meg</span>
+          <h2 class="h2" style="margin:1rem 0">Én person, full oppmerksomhet på prosjektet ditt.</h2>
+          <p class="lead">Jeg heter Vetle Austrheim Mardal og driver Mardal Digital — webutvikling og design fra Haugalandet. Jeg hjelper små bedrifter og enkeltpersonforetak med å få en nettside de kan være stolte av, uten dyre byråpriser eller teknisk stress.</p>
+          <p class="lead" style="margin-top:1rem">Du snakker direkte med meg hele veien — ingen mellomledd, ingen sjargong. Bare god design, ærlig rådgivning og en fast pris du kan stole på.</p>
+          <a class="btn btn--violet" href="#kontakt" style="margin-top:1.6rem">La oss ta en prat <span class="arw">→</span></a>
+        </div>
+        <div class="about__stats" data-reveal style="--i:1">
+          <div class="about__stat"><div class="n">1–2</div><div class="l">ukers leveringstid</div></div>
+          <div class="about__stat"><div class="n">1:1</div><div class="l">du snakker direkte med meg</div></div>
+          <div class="about__stat"><div class="n">0</div><div class="l">skjulte kostnader</div></div>
+          <div class="about__stat"><div class="n">100%</div><div class="l">fast pris, alltid</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section class="section" id="kontakt" style="padding-top:0">
+      <div class="wrap">
+        <div class="cta" data-reveal>
+          <span class="cta__glow"></span>
+          <div class="cta__grid">
+            <div>
+              <h2 class="h1" style="color:#fff">La oss bygge noe bra sammen.</h2>
+              <p class="lead" style="color:rgba(255,255,255,.85)">Fortell kort om bedriften din og hva du ønsker deg. Det koster ingenting å spørre — og jeg svarer så fort jeg kan.</p>
+              <div class="cta__contacts">
+                <a href="mailto:mardal2005@gmail.com">✉ mardal2005@gmail.com</a>
+                <a href="tel:+4741392413">☎ 413 92 413</a>
               </div>
             </div>
-            <div class="laptop__deck"><span class="laptop__notch" aria-hidden="true"></span></div>
-          </div>
-
-          <div class="phone" data-parallax="-0.08">
-            <span class="phone__speaker" aria-hidden="true"></span>
-            <div class="phone__screen">
-              <img src="assets/img/forre-bygg-mobile.png" alt="Nettsiden til Førre Bygg vist på mobil" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <div class="case__foot">
-          <p class="case__lead" data-reveal>En ny digital tilstedeværelse for et lokalt byggefirma — solid, tydelig og tillitvekkende.</p>
-          <dl class="case__facts" data-reveal style="--i:1">
-            <div><dt>Rolle</dt><dd>Design & utvikling</dd></div>
-            <div><dt>Leveranse</dt><dd>Responsiv nettside</dd></div>
-            <div><dt>År</dt><dd>2026</dd></div>
-            <div><dt>Bransje</dt><dd>Bygg & anlegg</dd></div>
-          </dl>
-        </div>
-      </article>
-
-      <div class="work-list" aria-label="Plass til flere prosjekter">
-        <div class="row open">
-          <span class="n">02</span>
-          <span class="t">Din bedrift?</span>
-          <span class="s">Plass ledig →</span>
-        </div>
-        <div class="row">
-          <span class="n">03</span>
-          <span class="t">Neste prosjekt</span>
-          <span class="s">Kommer</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 03 — TJENESTER + PRISER ============ -->
-    <section class="section section--divider" id="services" aria-labelledby="services-title">
-      <div class="sec-head">
-        <span class="sec-head__label label"><b>03</b><span class="rule"></span>Tjenester</span>
-        <h2 class="sec-head__title" id="services-title" data-reveal>Hva jeg<br>tilbyr</h2>
-        <p class="sec-head__note" data-reveal style="--i:1">Design og utvikling under ett tak. Klare leveranser, tydelige priser.</p>
-      </div>
-
-      <div class="offer">
-        <div class="offer__row" data-reveal>
-          <span class="offer__no">01</span>
-          <span class="offer__name">Nettside</span>
-          <span class="offer__desc">Skreddersydd design og utvikling av en nettside bygget rundt bedriften din.</span>
-          <span class="offer__price"><span class="from">Fra</span><span class="amt">14 900 kr</span></span>
-        </div>
-        <div class="offer__row" data-reveal>
-          <span class="offer__no">02</span>
-          <span class="offer__name">Merkevare</span>
-          <span class="offer__desc">Visuell identitet — logo, farger og en tydelig retning som henger sammen.</span>
-          <span class="offer__price"><span class="from">Fra</span><span class="amt">7 900 kr</span></span>
-        </div>
-        <div class="offer__row" data-reveal>
-          <span class="offer__no">03</span>
-          <span class="offer__name">Nettside + merkevare</span>
-          <span class="offer__desc">Alt samlet i én helhetlig leveranse — fra identitet til ferdig side.</span>
-          <span class="offer__price"><span class="from">Fra</span><span class="amt">24 900 kr</span></span>
-        </div>
-        <div class="offer__row" data-reveal>
-          <span class="offer__no">04</span>
-          <span class="offer__name">Drift & videreutvikling</span>
-          <span class="offer__desc">Oppdatering, endringer og støtte etter at siden er lansert.</span>
-          <span class="offer__price"><span class="from">Fra</span><span class="amt">490 kr / mnd</span></span>
-        </div>
-      </div>
-      <p class="offer__note">Veiledende priser · eks. mva · endelig pris avtales per prosjekt</p>
-    </section>
-
-    <!-- ============ 04 — PROSESS ============ -->
-    <section class="section section--surface section--divider" id="process" aria-labelledby="process-title">
-      <div class="sec-head">
-        <span class="sec-head__label label"><b>04</b><span class="rule"></span>Prosess</span>
-        <h2 class="sec-head__title" id="process-title" data-reveal>Prosess</h2>
-        <p class="sec-head__note" data-reveal style="--i:1">Ryddig og forutsigbart. Du vet hva du får, hele veien.</p>
-      </div>
-
-      <div class="grid12">
-        <p class="proc__intro" data-reveal>Fra første idé til ferdig nettside.</p>
-      </div>
-
-      <div class="steps">
-        <div class="step" data-reveal>
-          <span class="step__no">01</span>
-          <span class="step__title">Kartlegge</span>
-          <p class="step__desc">Vi starter med bedriften din – hvem du er, hva du tilbyr og hvem du ønsker å nå.</p>
-        </div>
-        <div class="step" data-reveal>
-          <span class="step__no">02</span>
-          <span class="step__title">Utforme</span>
-          <p class="step__desc">Jeg utvikler et visuelt uttrykk og en struktur som passer bedriften din.</p>
-        </div>
-        <div class="step" data-reveal>
-          <span class="step__no">03</span>
-          <span class="step__title">Utvikle</span>
-          <p class="step__desc">Designet blir gjort om til en rask, responsiv og gjennomført nettside.</p>
-        </div>
-        <div class="step" data-reveal>
-          <span class="step__no">04</span>
-          <span class="step__title">Lansere</span>
-          <p class="step__desc">Nettsiden gjøres klar og publiseres. Deretter kan jeg hjelpe med videre oppdateringer og vedlikehold.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 05 — OM ============ -->
-    <section class="section section--divider" id="about" aria-labelledby="about-title">
-      <div class="sec-head">
-        <span class="sec-head__label label"><b>05</b><span class="rule"></span>Om</span>
-        <h2 class="sec-head__title" id="about-title" data-reveal>Studioet</h2>
-      </div>
-
-      <div class="about">
-        <p class="about__statement" data-reveal>
-          Mardal Digital er et lite studio med én ambisjon —
-          <span class="dim">å lage nettsider som faktisk skiller seg ut.</span>
-        </p>
-        <span class="about__side label label--dim" data-reveal style="--i:1">(Est. 2026)</span>
-
-        <div class="about__meta">
-          <div data-reveal>
-            <h4>Tilnærming</h4>
-            <ul>
-              <li>Egen identitet for hver kunde</li>
-              <li>Ingen maler eller gjenbruk</li>
-              <li>Gjennomført i hver detalj</li>
-            </ul>
-          </div>
-          <div data-reveal style="--i:1">
-            <h4>Samarbeid</h4>
-            <ul>
-              <li>Direkte kontakt hele veien</li>
-              <li>Åpne priser, ingen overraskelser</li>
-              <li>Ferdig når det er bra</li>
-            </ul>
-          </div>
-          <div data-reveal style="--i:2">
-            <h4>Detaljer</h4>
-            <ul>
-              <li>Basert på Haugalandet</li>
-              <li>Jobber remote, hele Norge</li>
-              <li>Ledig for nye prosjekter</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 06 — KONTAKT ============ -->
-    <section class="section section--divider" id="contact" aria-labelledby="contact-title">
-      <div class="sec-head">
-        <span class="sec-head__label label"><b>06</b><span class="rule"></span>Kontakt</span>
-        <h2 class="sec-head__title" id="contact-title" data-reveal>La oss<br>snakke</h2>
-      </div>
-
-      <p class="contact__pre" data-reveal>Har du et prosjekt på gang? Send noen ord, så tar vi det derfra.</p>
-
-      <a class="contact__mail" href="mailto:hei@mardaldigital.no" data-cursor="link" data-reveal style="--i:1">
-        hei@mardaldigital.no <span class="arw">↗</span>
-      </a>
-
-      <div class="contact__row">
-        <div class="block">
-          <span class="label">Direkte</span>
-          <a href="tel:+4741392413">+47 413 92 413</a>
-        </div>
-        <div class="block">
-          <span class="label">Sted</span>
-          <span>Haugalandet, Norge</span>
-        </div>
-        <div class="block">
-          <span class="label">Sosialt</span>
-          <div class="socials">
-            <a href="#" aria-label="Instagram">Instagram</a>
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <form class="form" id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+              <div class="form__fields">
+                <div class="form__row"><label for="navn">Navn</label><input id="navn" name="navn" type="text" required placeholder="Ola Nordmann"></div>
+                <div class="form__row"><label for="epost">E-post</label><input id="epost" name="epost" type="email" required placeholder="ola@bedrift.no"></div>
+                <div class="form__row"><label for="melding">Fortell kort om prosjektet</label><textarea id="melding" name="melding" required placeholder="Jeg driver en … og trenger en nettside som …"></textarea></div>
+                <button class="btn btn--ink btn--block" type="submit">Send melding <span class="arw">→</span></button>
+                <p class="form__note">Jeg deler aldri opplysningene dine.</p>
+              </div>
+              <div class="form__ok">Takk! Meldingen er sendt — jeg tar kontakt snart.</div>
+            </form>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer__big" aria-hidden="true">Mardal Digital</div>
-    <div class="footer__bar">
-      <span>© <span id="year">2026</span> Mardal Digital</span>
-      <span class="footer__clock" id="clock">Oslo — <b>--:--</b></span>
-      <span><a href="personvern.html">Personvern</a></span>
-      <span>Laget for hånd i Norge</span>
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="#top" style="color:var(--bg)">
+            <svg class="md" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="11" fill="#5B34F0"/><path d="M9 29V12h3.1l3.9 8.6L19.9 12H23v17h-2.8V18.7l-3.3 7.2h-1.6l-3.3-7.2V29H9Zm16.6 0V12h3.7c3.8 0 6.2 3.1 6.2 8.5s-2.4 8.5-6.2 8.5h-3.7Zm2.8-2.5h.9c2.2 0 3.4-2 3.4-6s-1.2-6-3.4-6h-.9v12Z" fill="#fff"/></svg>
+            Mardal Digital
+          </a>
+          <p>Webutvikling og design fra Haugalandet. Nettsider for småbedrifter og enkeltpersonforetak.</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col"><h4>Sider</h4><a href="#arbeid">Arbeid</a><a href="#tjenester">Tjenester</a><a href="#priser">Priser</a><a href="#om">Om</a></div>
+          <div class="footer__col"><h4>Kontakt</h4><a href="mailto:mardal2005@gmail.com">mardal2005@gmail.com</a><a href="tel:+4741392413">413 92 413</a><span>Haugalandet, Norge</span></div>
+        </div>
+      </div>
+      <div class="footer__word" aria-hidden="true">Mardal Digital</div>
+      <div class="footer__bar">
+        <span>© <span id="year">2026</span> Mardal Digital — Vetle Austrheim Mardal</span>
+        <span><a href="personvern.html">Personvern</a></span>
+      </div>
     </div>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <div class="sticky-cta" id="stickyCta"><a class="btn btn--violet btn--block" href="#kontakt">La oss ta en prat →</a></div>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>
